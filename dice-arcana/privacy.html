@@ -4,7 +4,7 @@
 <body><main>
 <nav><a href="privacy-en.html">English</a></nav>
 <h1>Política de privacidad de Dice Arcana</h1>
-<p class="muted">Última actualización: 16 de noviembre de 2026</p>
+<p class="muted">Última actualización: 19 de noviembre de 2026</p>
 <section>
 <h2>1. Responsable</h2>
 <p>Beñat González Laso (España), desarrollador de la aplicación Dice Arcana («la app»).<br>
@@ -12,13 +12,15 @@ Contacto: <a href="mailto:benat.gonzalez.dev@gmail.com">benat.gonzalez.dev@gmail
 
 <h2>2. Resumen</h2>
 <ul>
-<li>La app no tiene cuentas de usuario ni te pide nombre, correo ni otros datos personales.</li>
-<li>Tu progreso y tus ajustes se guardan solo en tu dispositivo. No los recibimos.</li>
+<li>La app no tiene cuentas de usuario ni te pide correo ni otros datos personales. Te identifica un <strong>código de jugador</strong> aleatorio que crea la propia app (lo ves en Ajustes).</li>
+<li>Tu progreso y tus ajustes se guardan en tu dispositivo.</li>
+<li>Para el <strong>ranking del reto del día</strong>, se suben tus puntuaciones de ese reto con tu código, tu nombre de jugador y tu avatar del juego (apartado 5).</li>
+<li>Para arreglar fallos y mejorar el juego, se envían <strong>informes de fallos</strong> y, si das tu consentimiento, <strong>estadísticas de uso</strong> (apartado 6).</li>
 <li>La app muestra anuncios de Google AdMob. Google trata ciertos datos del dispositivo para mostrarlos y medirlos. En el Espacio Económico Europeo, Reino Unido y Suiza se te pide consentimiento antes.</li>
 </ul>
 
 <h2>3. Datos guardados en tu dispositivo</h2>
-<p>El progreso (nivel, desbloqueos, partidas guardadas, estadísticas) y los ajustes (sonido, avisos…) se guardan en el almacenamiento interno de la app en tu dispositivo. No se envían a ningún servidor nuestro. Se borran al desinstalar la app o al usar «Reiniciar progreso» en Ajustes.</p>
+<p>El progreso (nivel, desbloqueos, partidas guardadas, estadísticas) y los ajustes (sonido, avisos…) se guardan en el almacenamiento interno de la app en tu dispositivo. Salvo lo indicado en los apartados 5 y 6, no se envían a ningún servidor. Se borran al desinstalar la app.</p>
 
 <h2>4. Publicidad (Google AdMob)</h2>
 <p>La app usa Google AdMob, de Google Ireland Limited / Google LLC, para mostrar anuncios. Entre ellos hay anuncios voluntarios que puedes ver a cambio de una recompensa dentro del juego. Para servirlos, medirlos y prevenir fraude, Google puede recoger y tratar:</p>
@@ -32,25 +34,40 @@ Contacto: <a href="mailto:benat.gonzalez.dev@gmail.com">benat.gonzalez.dev@gmail
 <p>La base legal es tu consentimiento (art. 6.1.a del RGPD). Para lo estrictamente necesario para servir anuncios no personalizados y prevenir fraude, la base es el interés legítimo (art. 6.1.f). Google trata y conserva estos datos según su propia política: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Cómo usa Google los datos en apps de sus socios: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
 <p>También puedes restablecer o eliminar el identificador de publicidad desde los ajustes de Android (Google → Anuncios).</p>
 
-<h2>5. Hora del juego</h2>
+<h2>5. Ranking del reto del día (Google Firebase)</h2>
+<p>Cuando terminas un intento del reto del día, la app sube a Google Firebase (Cloud Firestore), con un acceso anónimo de Firebase Authentication que no pide ningún dato tuyo:</p>
+<ul>
+<li>tu código de jugador, tu nombre de jugador y el avatar (personaje) que tengas elegido;</li>
+<li>tu mejor puntuación de ese día, la de cada intento, en qué intento la hiciste y si superaste el reto;</li>
+<li>la fecha y hora de la subida.</li>
+</ul>
+<p>Los demás jugadores ven en el ranking tu posición, tu nombre, tu avatar, tu código y tu puntuación. La finalidad es mostrar el ranking; la base legal es la ejecución del servicio que pides al jugar el reto (art. 6.1.b del RGPD). Las puntuaciones se conservan mientras exista el ranking o hasta que pidas borrarlas (apartado 12). Los días jugados con herramientas de prueba no se suben.</p>
+<p>La app también lee de Firebase, sin enviar datos tuyos, la versión mínima del juego (para avisarte si hay que actualizar).</p>
+
+<h2>6. Informes de fallos y estadísticas (Google Firebase)</h2>
+<p><strong>Informes de fallos (Firebase Crashlytics).</strong> Si la app se cierra o falla, se envía un informe técnico: qué falló, el modelo del dispositivo, la versión de Android y de la app, y tu código de jugador para poder relacionar varios fallos del mismo dispositivo. La base legal es el interés legítimo en que la app funcione (art. 6.1.f).</p>
+<p><strong>Estadísticas de uso (Google Analytics para Firebase).</strong> Solo si das tu consentimiento en el formulario del apartado 4, se envían datos de uso: qué partes del juego se usan (por ejemplo, empezar o terminar una partida o ver un anuncio), datos del dispositivo y tu código de jugador. Sirven para saber qué mejorar. Puedes retirar el consentimiento en <em>Ajustes → Privacidad de anuncios</em>.</p>
+<p>Google conserva estos datos según sus plazos (Crashlytics, unos 90 días; Analytics, según la configuración del proyecto: por defecto 2 meses y como máximo 14). Más información: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</p>
+
+<h2>7. Hora del juego</h2>
 <p>Para que el reto del día sea el mismo para todos, la app consulta la hora actual a un servidor de Google mediante una petición mínima. No enviamos ningún identificador ni dato tuyo. Google recibe los datos técnicos propios de cualquier conexión, como la dirección IP.</p>
 
-<h2>6. Notificaciones</h2>
+<h2>8. Notificaciones</h2>
 <p>Si las activas, la app programa en tu propio dispositivo un aviso diario del reto. Son notificaciones locales: no usan ningún servidor ni envían datos. Puedes desactivarlas en Ajustes o en los ajustes de Android.</p>
 
-<h2>7. Motor del juego (Unity)</h2>
+<h2>9. Motor del juego (Unity)</h2>
 <p>La app está hecha con Unity. El motor puede enviar a Unity Technologies datos técnicos anónimos del dispositivo (por ejemplo, el modelo y la versión del sistema) para mejorar su software. Más información: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
 
-<h2>8. Menores</h2>
+<h2>10. Menores</h2>
 <p>La app no está dirigida a menores de 13 años ni recoge a sabiendas datos de menores. En el Espacio Económico Europeo, si tienes menos de la edad mínima de consentimiento de tu país (en España, 14 años), pide a tu madre, padre o tutor que gestione el consentimiento de los anuncios.</p>
 
-<h2>9. Transferencias internacionales</h2>
-<p>Google puede tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el RGPD (cláusulas contractuales tipo y el Marco de Privacidad de Datos UE-EE. UU.).</p>
+<h2>11. Transferencias internacionales</h2>
+<p>Google (AdMob y Firebase) puede tratar datos fuera del Espacio Económico Europeo con las garantías previstas en el RGPD (cláusulas contractuales tipo y el Marco de Privacidad de Datos UE-EE. UU.).</p>
 
-<h2>10. Tus derechos</h2>
-<p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad, y retirar tu consentimiento, escribiendo a <a href="mailto:benat.gonzalez.dev@gmail.com">benat.gonzalez.dev@gmail.com</a>. Como no guardamos datos tuyos en servidores propios, para los datos que trata Google puedes usar también sus herramientas: <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com</a>. Si crees que no se respetan tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
+<h2>12. Tus derechos</h2>
+<p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad, y retirar tu consentimiento, escribiendo a <a href="mailto:benat.gonzalez.dev@gmail.com">benat.gonzalez.dev@gmail.com</a>. Indica tu <strong>código de jugador</strong> (Ajustes) para que podamos encontrar tus puntuaciones e informes y borrarlos. Para los datos de publicidad que trata Google puedes usar también sus herramientas: <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com</a>. Si crees que no se respetan tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.aepd.es</a>).</p>
 
-<h2>11. Cambios</h2>
+<h2>13. Cambios</h2>
 <p>Si esta política cambia, se publicará aquí con su nueva fecha. Si el cambio es importante, se avisará dentro de la app.</p>
 </section>
 </main></body></html>
